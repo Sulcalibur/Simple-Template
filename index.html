@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Template Demo Test</title>
+
+    <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+</head>
+<body>
+	<script id="template" type="text/html">
+		<h1 id="">Hi, my name is {{firstName}}</h1>
+		<h2>A {{profession}} based in {{location}}</h2>
+		<p>I specialise in the following:</p>
+
+		<ul>
+			{areas}
+			<li>{value}</li>
+			{/areas}
+		</ul>
+
+		<p>This is an awesome picture of myself</p>
+		<a href="http://twitter.com/{{twitter}}"><img src="{{picUrl}}" alt="A picture of {{firstName}}" /></a>
+		<p>Feel free to follow me on twitter - <a href="http://twitter.com/{{twitter}}">@{{twitter}}</a></p>
+
+
+
+
+
+
+
+
+
+
+
+		<h2>Conditionals</h2>
+		<p>
+			{#if show}
+				SHOW IT!
+			{#else}
+				DONT SHOW!
+			{#/if}
+		</p>
+		<p>
+			{#if not show}
+				SHOW IT!
+			{#else}
+				DONT SHOW!
+			{#/if}
+		</p>
+
+		<h2>Array + Object</h2>
+		{tests}
+			<p>{name}</p>
+		{/tests}
+
+		<h2>Array</h2>
+		{animals}
+			<p>{value}</p>
+		{/animals}
+	</script>
+	<script src="wreckbars.js"></script>
+	<script src="template2.js"></script>
+</body>
+</html>
